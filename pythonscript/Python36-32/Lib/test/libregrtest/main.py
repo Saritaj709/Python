@@ -511,9 +511,9 @@ class Regrtest:
     def _main(self, tests, kwargs):
         self.ns = self.parse_args(kwargs)
 
-        if self.ns.slaveargs is not None:
-            from test.libregrtest.runtest_mp import run_tests_slave
-            run_tests_slave(self.ns.slaveargs)
+        if self.ns.subordinateargs is not None:
+            from test.libregrtest.runtest_mp import run_tests_subordinate
+            run_tests_subordinate(self.ns.subordinateargs)
 
         if self.ns.wait:
             input("Press any key to continue...")

@@ -36,7 +36,7 @@ class PathBrowserTest(unittest.TestCase):
     def test_init(self):
         pb = self.pb
         eq = self.assertEqual
-        eq(pb.master, self.root)
+        eq(pb.main, self.root)
         eq(pyclbr._modules, {})
         self.assertIsInstance(pb.node, TreeNode)
         self.assertIsNotNone(browser.file_open)

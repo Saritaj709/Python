@@ -263,7 +263,7 @@ def clear_caches():
     except KeyError:
         pass
     else:
-        doctest.master = None
+        doctest.main = None
 
     try:
         ctypes = sys.modules['ctypes']
