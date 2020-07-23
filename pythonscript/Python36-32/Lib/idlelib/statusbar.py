@@ -3,8 +3,8 @@ from tkinter import Frame, Label
 
 class MultiStatusBar(Frame):
 
-    def __init__(self, master, **kw):
-        Frame.__init__(self, master, **kw)
+    def __init__(self, main, **kw):
+        Frame.__init__(self, main, **kw)
         self.labels = {}
 
     def set_label(self, name, text='', side='left', width=0):

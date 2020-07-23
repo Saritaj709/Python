@@ -14,11 +14,11 @@ class Dialog:
 
     command  = None
 
-    def __init__(self, master=None, **options):
-        self.master  = master
+    def __init__(self, main=None, **options):
+        self.main  = main
         self.options = options
-        if not master and options.get('parent'):
-            self.master = options['parent']
+        if not main and options.get('parent'):
+            self.main = options['parent']
 
     def _fixoptions(self):
         pass # hook
@@ -36,7 +36,7 @@ class Dialog:
 
         # we need a dummy widget to properly process the options
         # (at least as long as we use Tkinter 1.63)
-        w = Frame(self.master)
+        w = Frame(self.main)
 
         try:
 

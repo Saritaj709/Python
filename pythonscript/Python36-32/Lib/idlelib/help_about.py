@@ -77,7 +77,7 @@ class AboutDialog(Toplevel):
         ext = '.png' if tk_patchlevel >= '8.6' else '.gif'
         icon = os.path.join(os.path.abspath(os.path.dirname(__file__)),
                             'Icons', f'idle_48{ext}')
-        self.icon_image = PhotoImage(master=self._root(), file=icon)
+        self.icon_image = PhotoImage(main=self._root(), file=icon)
         logo = Label(frame_background, image=self.icon_image, bg=self.bg)
         logo.grid(row=0, column=0, sticky=W, rowspan=2, padx=10, pady=10)
 

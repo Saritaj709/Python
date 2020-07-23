@@ -61,11 +61,11 @@ class ModuleBrowser:
     # Init and close are inherited, other methods are overridden.
     # PathBrowser.__init__ does not call __init__ below.
 
-    def __init__(self, master, path, *, _htest=False, _utest=False):
+    def __init__(self, main, path, *, _htest=False, _utest=False):
         """Create a window for browsing a module's structure.
 
         Args:
-            master: parent for widgets.
+            main: parent for widgets.
             path: full path of file to browse.
             _htest - bool; change box location when running htest.
             -utest - bool; suppress contents when running unittest.
@@ -79,7 +79,7 @@ class ModuleBrowser:
                 creating ModuleBrowserTreeItem as the rootnode for
                 the tree and subsequently in the children.
         """
-        self.master = master
+        self.main = main
         self.path = path
         self._htest = _htest
         self._utest = _utest
@@ -93,7 +93,7 @@ class ModuleBrowser:
     def init(self):
         "Create browser tkinter widgets, including the tree."
         global file_open
-        root = self.master
+        root = self.main
         flist = (pyshell.flist if not (self._htest or self._utest)
                  else pyshell.PyShellFileList(root))
         file_open = flist.open

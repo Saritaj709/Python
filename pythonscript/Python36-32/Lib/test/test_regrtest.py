@@ -65,10 +65,10 @@ class ParseArgsTestCase(unittest.TestCase):
         ns = libregrtest._parse_args(['--wait'])
         self.assertTrue(ns.wait)
 
-    def test_slaveargs(self):
-        ns = libregrtest._parse_args(['--slaveargs', '[[], {}]'])
-        self.assertEqual(ns.slaveargs, '[[], {}]')
-        self.checkError(['--slaveargs'], 'expected one argument')
+    def test_subordinateargs(self):
+        ns = libregrtest._parse_args(['--subordinateargs', '[[], {}]'])
+        self.assertEqual(ns.subordinateargs, '[[], {}]')
+        self.checkError(['--subordinateargs'], 'expected one argument')
 
     def test_start(self):
         for opt in '-S', '--start':

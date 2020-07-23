@@ -8,11 +8,11 @@ from idlelib.tree import TreeItem
 
 class PathBrowser(ModuleBrowser):
 
-    def __init__(self, master, *, _htest=False, _utest=False):
+    def __init__(self, main, *, _htest=False, _utest=False):
         """
         _htest - bool, change box location when running htest
         """
-        self.master = master
+        self.main = main
         self._htest = _htest
         self._utest = _utest
         self.init()

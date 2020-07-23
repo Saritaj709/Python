@@ -1472,7 +1472,7 @@ def main():
         ext = '.png' if TkVersion >= 8.6 else '.gif'
         iconfiles = [os.path.join(icondir, 'idle_%d%s' % (size, ext))
                      for size in (16, 32, 48)]
-        icons = [PhotoImage(master=root, file=iconfile)
+        icons = [PhotoImage(main=root, file=iconfile)
                  for iconfile in iconfiles]
         root.wm_iconphoto(True, *icons)
 
